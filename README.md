@@ -2,20 +2,20 @@
 
 ## Part 2 - Hyperparameter optimization, model deployment and scoring with Watson Studio
 
-This Watson Studio labs continues working with the RNN developed in  [Part 1](https://github.com/justinmccoy/timeseries-rnn-lab-part1). It contains the steps and code to demonstrate support of deep learning experiments in Watson Machine Learning Service. It illustrates the use of  the  Watson Machine Learning Python API for getting data, experiment definition, hyper parameter optimization, model persistence, model deployment and scoring.
+This Watson Studio labs continues working with the RNN developed in  [Part 1](https://github.com/ibm-ai-education/timeseries-rnn-lab-part1). It contains the steps and code to demonstrate support of deep learning experiments in Watson Machine Learning Service. It illustrates the use of the Watson Machine Learning Python API for getting data, experiment definition, hyper parameter optimization, model persistence, model deployment and scoring.
 
 ## Setup
 
-**Note:** If you haven't done  the lab in [Part 1](https://github.com/justinmccoy/timeseries-rnn-lab-part1) then follow the following steps in the [setup instructions for Part 1](https://github.com/justinmccoy/timeseries-rnn-lab-part1#setup) before continuing:
+**Note:** If you haven't completed the lab in [Part 1](https://github.com/ibm-ai-education/timeseries-rnn-lab-part1) then follow the following steps in the [setup instructions for Part 1](https://github.com/ibm-ai-education/timeseries-rnn-lab-part1#setup) before continuing:
 
    i. Sign up for Watson Studio (if you haven't already)
 
    ii. Create a Watson Studio Project
 
 
-### 1. Add Cloud Object Storage credentials for your code
+### 1 Add Cloud Object Storage credentials for your code
 
-Your code  will need access to Cloud Object Storage in this lab. An instance of Cloud Object Storage  will have been created for you when you created the Watson Studio Project in Part 1.
+Your code will need access to Cloud Object Storage in this lab. An instance of Cloud Object Storage will have been created for you when you created the Watson Studio Project in Part 1.
 
 1.1 Sign in to the [IBM Cloud](https://cloud.ibm.com) with the same credentials you use for Watson Studio. Click on **Storage**
 
@@ -36,14 +36,14 @@ Your code  will need access to Cloud Object Storage in this lab. An instance of 
 ![Add new credential](images/ss3.1.png)
 
 
-1.5 Click on **View credentials** next to the  credential you just added and copy the entire JSON document to a new text file on your Desktop. You'll need this information when running your notebook later in the lab.
+1.5 Click on **View credentials** next to the credential you just added and copy the entire JSON document to a new text file on your Desktop. You'll need this information when running your notebook later in the lab.
 
 ![Save credential](images/ss4.png)
 
 
-### 2. Associate an instance of the Watson Machine Learning service  with your Watson Studio Project
+### 2 Associate an instance of the Watson Machine Learning service  with your Watson Studio Project
 
-2.1 In a new browser tab go to  [Watson Studio](https://dataplatform.ibm.com), sign in if required, and then  select the project  **Time Series RNN Demo** from Part 1.
+2.1 In a new browser tab go to [Watson Studio](https://cloud.ibm.com/resources?search=watson%20studio), sign in if required, and then select the project **Time Series RNN Demo** from Part 1.
 
 
 2.2 Click on the **Settings** for your project
@@ -52,7 +52,7 @@ Your code  will need access to Cloud Object Storage in this lab. An instance of 
 
 2.3 Scroll down to the **Associated services** section. Click on **Add Service**, select **Watson** and then click the **Add** link in the **Machine Learning** tile
 
-2.4 If the **Existing** tab is enabled click on it and then select your existing instance from the drop down. Click **Select** and skip to step 2.6.
+2.4 If the **Existing** tab is enabled, click on it and then select your existing instance from the drop down. Click **Select** and skip to step 2.6.
 
 2.5 If you don't have an existing Machine Learning instance click on the **New** tab , select the **Lite plan** and then click **Create**. Click on **Confirm** when prompted.
 
@@ -69,10 +69,10 @@ Your code  will need access to Cloud Object Storage in this lab. An instance of 
 ![WML credentials](images/ss9.png)
 
 
-2.8 Copy the JSON content to the  same text file you used to save the Cloud Object Storage credentials earlier. You'll need this information when running your notebook later in the lab.
+2.8 Copy the JSON content to the same text file you used to save the Cloud Object Storage credentials earlier. You'll need this information when running your notebook later in the lab.
 
 
-### 3. Create  and run this lab's notebook
+### 3 Create and run this lab's notebook
 
 3.1 Go back to your Watson Studio tab and select **Projects->Time Series RNN Demo**
 
