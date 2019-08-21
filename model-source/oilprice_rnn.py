@@ -200,7 +200,7 @@ if __name__ == '__main__':
 
     #hpo = HPOMetrics()
 
-    history = model.fit(trainX, trainY, epochs=epochs, batch_size=batch_size, validation_data=(testX, testY),  callbacks=[splitter], shuffle=False)
+    history = model.fit(trainX, trainY, epochs=epochs, batch_size=batch_size, validation_data=(testX, testY), shuffle=False)
 
     #hpo.close()
     #history = model.fit(trainX, trainY, epochs=epochs, batch_size=batch_size, validation_data=(testX, testY),  callbacks=[tensorboard], shuffle=False)
@@ -223,8 +223,8 @@ if __name__ == '__main__':
     else:
         metrics_file = 'val_dict_list.json'
 
-    #with open(metrics_file, 'w') as f:
-    #   json.dump(metrics_out, f)
+    with open(metrics_file, 'w') as f:
+      json.dump(metrics_out, f)
 
     # Check out MSE, RMSE, MAE for  testing data
     #testing_error = model.evaluate(testX, testY, verbose=0)
