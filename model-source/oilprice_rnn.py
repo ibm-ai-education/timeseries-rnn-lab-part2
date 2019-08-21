@@ -102,12 +102,11 @@ if __name__ == '__main__':
         with open(config_file, 'r') as f:
             json_obj = json.load(f)
             prev_periods = int(json_obj["prev_periods"])
-            #dropout_rate = float(json_obj["dropout_rate"])
+            dropout_rate = float(json_obj["dropout_rate"])
     else:
         prev_periods = 1
-        #dropout_rate = 0.2
-        
-    dropout_rate = 0.2
+        dropout_rate = 0.2
+
     # data_url = "https://ibm.box.com/shared/static/ojkntksc9rdbrj52yzkqfhbc1c9kv833.csv"
 
     data = pd.read_csv(input_data_path, index_col='DATE')
