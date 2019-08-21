@@ -1,4 +1,5 @@
 import keras
+import tensorflow
 import json
 import os.path
 from keras.models import Sequential
@@ -121,12 +122,18 @@ if __name__ == '__main__':
     #tensorboard = TensorBoard(log_dir=tb_directory)
 
     # create TensorBoard instance for writing test/validation metrics
-    tb_directory_test = os.environ["LOG_DIR"]+ "/" + os.environ["SUBID"] + "/logs/tb/test"
+    if environ.get('LOG_DIR') is not None and  environ.get('SUBID') is not None:
+       tb_directory_test = os.environ["LOG_DIR"]+ "/" + os.environ["SUBID"] + "/logs/tb/test"
+    else:
+       tb_directory_test = "/Users/carew@us.ibm.com/build/timeseries-rnn-lab-part2/model-source/logs/tb/test"
     tensorboard_test = TensorBoard(log_dir=tb_directory_test)
     tensorflow.gfile.MakeDirs(tb_directory_test)
 
     # create TensorBoard instance for writing training metrics
-    tb_directory_train = os.environ["LOG_DIR"]+ "/" + os.environ["SUBID"] + "/logs/tb/train"
+    if environ.get('LOG_DIR') is not None and environ.get('SUBID') is not None:
+       tb_directory_train = os.environ["LOG_DIR"]+ "/" + os.environ["SUBID"] + "/logs/tb/train"
+    else:
+       tb_directory_train = "/Users/carew@us.ibm.com/build/timeseries-rnn-lab-part2/model-source/logs/tb/train"
     tensorboard_train = TensorBoard(log_dir=tb_directory_train)
     tensorflow.gfile.MakeDirs(tb_directory_train)
 
@@ -179,7 +186,7 @@ if __name__ == '__main__':
 
     # Build model
     lstm_units = 1000
-    epochs = 20
+    epochs = 5
     batch_size = 32
     model = Sequential()
     model.add(LSTM(lstm_units, input_shape=(trainX.shape[1], trainX.shape[2])))
@@ -197,7 +204,22 @@ if __name__ == '__main__':
     #hpo.close()
     #history = model.fit(trainX, trainY, epochs=epochs, batch_size=batch_size, validation_data=(testX, testY),  callbacks=[tensorboard], shuffle=False)
 
+    #print("Metrics: " + str(history.history.keys()))
     #print("Training history:" + str(history.history))
+    metrics_out = []
+    for i in range(epochs):
+        each_epoch = {"steps": (i+1)}
+        for metric in list(history.history.keys()):
+            each_epoch[metric] = history.history[metric][i]
+        metrics_out.append(each_epoch)
+
+    if environ.get('RESULT_DIR') is not None:
+        metrics_file = '{}/val_dict_list.json'.format(os.environ['RESULT_DIR'])
+    else
+        metrics_file = 'val_dict_list.json'
+    #with open(), 'w') as f:
+    with open('val_dict_list.json', 'w') as f:
+       json.dump(metrics_out, f)
 
     # Check out MSE, RMSE, MAE for  testing data
     #testing_error = model.evaluate(testX, testY, verbose=0)
