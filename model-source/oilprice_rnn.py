@@ -213,12 +213,12 @@ if __name__ == '__main__':
             each_epoch[metric] = history.history[metric][i]
         metrics_out.append(each_epoch)
 
-    if environ.get('RESULT_DIR') is not None:
-        metrics_file = '{}/val_dict_list.json'.format(os.environ['RESULT_DIR'])
+    if environ.get("RESULT_DIR") is not None:
+        metrics_file = os.environ["RESULT_DIR"] + '/val_dict_list.json'
     else:
         metrics_file = 'val_dict_list.json'
     #with open(), 'w') as f:
-    with open('val_dict_list.json', 'w') as f:
+    with open(metrics_file, 'w') as f:
        json.dump(metrics_out, f)
 
     # Check out MSE, RMSE, MAE for  testing data
