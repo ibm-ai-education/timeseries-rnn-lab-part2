@@ -1,0 +1,592 @@
+{
+  "metadata": {
+    "guid": "81bd7f67-fbc9-458f-8ffd-fe1b7e12cadc",
+    "url": "/v3/experiments/f0124958-7cea-4c0f-8397-272ad44a1696/runs/81bd7f67-fbc9-458f-8ffd-fe1b7e12cadc",
+    "created_at": "2019-08-21T05:13:15.972Z",
+    "modified_at": "2019-08-21T05:13:15.972Z"
+  },
+  "entity": {
+    "experiment_run_status": {
+      "submitted_at": "2019-08-21T05:13:16.158Z",
+      "current_at": "2019-08-21T05:13:16.158Z",
+      "current_iteration": 1,
+      "state": "running"
+    },
+    "training_statuses": [
+      {
+        "training_guid": "model-dmz3yfx1",
+        "training_definition_url": "https://us-south.ml.cloud.ibm.com/v3/ml_assets/training_definitions/b2533c6a-09d7-4c72-b0b1-11f3a434f4c5",
+        "training_url": "/v3/models/model-dmz3yfx1",
+        "state": "running",
+        "role": "hpo",
+        "submitted_at": "2019-08-21T05:13:17.204Z",
+        "running_at": "2019-08-21T05:13:32.892Z",
+        "results": {
+          "reference": {
+            "type": "s3",
+            "connection": {
+              "endpoint_url": "https://s3-api.us-geo.objectstorage.softlayer.net",
+              "access_key_id": "f88f2b41902f44d682daf125b6adfda5",
+              "secret_access_key": "d288b4754ebfc9646cf13a4431472a04d7522ded7b651855"
+            },
+            "location": {
+              "bucket": "oilprice-rnn-results-2810v5",
+              "model_location": "training-cRM8zrOWg",
+              "file_name": "model-dmz3yfx1"
+            }
+          }
+        },
+        "message": "training-cRM8zrOWg: ",
+        "metrics": [
+          {
+            "phase": "training",
+            "values": [
+              {
+                "name": "mean_absolute_error",
+                "value": 17.119054794311523
+              },
+              {
+                "name": "val_loss",
+                "value": 35.753482818603516
+              },
+              {
+                "name": "val_mean_absolute_error",
+                "value": 35.753482818603516
+              },
+              {
+                "name": "loss",
+                "value": 17.119054794311523
+              }
+            ],
+            "timestamp": "2019-08-21T05:21:18.000Z",
+            "iteration": 0
+          },
+          {
+            "phase": "training",
+            "values": [
+              {
+                "name": "val_loss",
+                "value": 32.25213623046875
+              },
+              {
+                "name": "val_mean_absolute_error",
+                "value": 32.25213623046875
+              },
+              {
+                "name": "loss",
+                "value": 9.426319122314453
+              },
+              {
+                "name": "mean_absolute_error",
+                "value": 9.426319122314453
+              }
+            ],
+            "timestamp": "2019-08-21T05:21:19.000Z",
+            "iteration": 1
+          },
+          {
+            "phase": "training",
+            "values": [
+              {
+                "name": "loss",
+                "value": 6.307831287384033
+              },
+              {
+                "name": "mean_absolute_error",
+                "value": 6.307831287384033
+              },
+              {
+                "name": "val_loss",
+                "value": 27.82793617248535
+              },
+              {
+                "name": "val_mean_absolute_error",
+                "value": 27.82793617248535
+              }
+            ],
+            "timestamp": "2019-08-21T05:21:19.000Z",
+            "iteration": 2
+          },
+          {
+            "phase": "training",
+            "values": [
+              {
+                "name": "val_mean_absolute_error",
+                "value": 24.147506713867188
+              },
+              {
+                "name": "loss",
+                "value": 5.148897171020508
+              },
+              {
+                "name": "mean_absolute_error",
+                "value": 5.148897171020508
+              },
+              {
+                "name": "val_loss",
+                "value": 24.147506713867188
+              }
+            ],
+            "timestamp": "2019-08-21T05:21:20.000Z",
+            "iteration": 3
+          },
+          {
+            "phase": "training",
+            "values": [
+              {
+                "name": "loss",
+                "value": 4.661454200744629
+              },
+              {
+                "name": "mean_absolute_error",
+                "value": 4.661454200744629
+              },
+              {
+                "name": "val_loss",
+                "value": 21.516435623168945
+              },
+              {
+                "name": "val_mean_absolute_error",
+                "value": 21.516435623168945
+              }
+            ],
+            "timestamp": "2019-08-21T05:21:20.000Z",
+            "iteration": 4
+          },
+          {
+            "phase": "training",
+            "values": [
+              {
+                "name": "val_mean_absolute_error",
+                "value": 19.852184295654297
+              },
+              {
+                "name": "loss",
+                "value": 4.032780170440674
+              },
+              {
+                "name": "mean_absolute_error",
+                "value": 4.032780170440674
+              },
+              {
+                "name": "val_loss",
+                "value": 19.852184295654297
+              }
+            ],
+            "timestamp": "2019-08-21T05:21:20.000Z",
+            "iteration": 5
+          },
+          {
+            "phase": "training",
+            "values": [
+              {
+                "name": "val_loss",
+                "value": 17.73232650756836
+              },
+              {
+                "name": "val_mean_absolute_error",
+                "value": 17.73232650756836
+              },
+              {
+                "name": "loss",
+                "value": 4.011486053466797
+              },
+              {
+                "name": "mean_absolute_error",
+                "value": 4.011486053466797
+              }
+            ],
+            "timestamp": "2019-08-21T05:21:21.000Z",
+            "iteration": 6
+          },
+          {
+            "phase": "training",
+            "values": [
+              {
+                "name": "loss",
+                "value": 3.2966268062591553
+              },
+              {
+                "name": "mean_absolute_error",
+                "value": 3.2966268062591553
+              },
+              {
+                "name": "val_loss",
+                "value": 15.330348014831543
+              },
+              {
+                "name": "val_mean_absolute_error",
+                "value": 15.330348014831543
+              }
+            ],
+            "timestamp": "2019-08-21T05:21:21.000Z",
+            "iteration": 7
+          },
+          {
+            "phase": "training",
+            "values": [
+              {
+                "name": "loss",
+                "value": 2.6454813480377197
+              },
+              {
+                "name": "mean_absolute_error",
+                "value": 2.6454813480377197
+              },
+              {
+                "name": "val_loss",
+                "value": 14.928853988647461
+              },
+              {
+                "name": "val_mean_absolute_error",
+                "value": 14.928853988647461
+              }
+            ],
+            "timestamp": "2019-08-21T05:21:22.000Z",
+            "iteration": 8
+          },
+          {
+            "phase": "training",
+            "values": [
+              {
+                "name": "mean_absolute_error",
+                "value": 3.204911231994629
+              },
+              {
+                "name": "val_loss",
+                "value": 12.593445777893066
+              },
+              {
+                "name": "val_mean_absolute_error",
+                "value": 12.593445777893066
+              },
+              {
+                "name": "loss",
+                "value": 3.204911231994629
+              }
+            ],
+            "timestamp": "2019-08-21T05:21:22.000Z",
+            "iteration": 9
+          },
+          {
+            "phase": "training",
+            "values": [
+              {
+                "name": "mean_absolute_error",
+                "value": 2.5590908527374268
+              },
+              {
+                "name": "val_loss",
+                "value": 13.677409172058105
+              },
+              {
+                "name": "val_mean_absolute_error",
+                "value": 13.677409172058105
+              },
+              {
+                "name": "loss",
+                "value": 2.5590908527374268
+              }
+            ],
+            "timestamp": "2019-08-21T05:21:23.000Z",
+            "iteration": 10
+          },
+          {
+            "phase": "training",
+            "values": [
+              {
+                "name": "val_mean_absolute_error",
+                "value": 11.681310653686523
+              },
+              {
+                "name": "loss",
+                "value": 3.9797921180725098
+              },
+              {
+                "name": "mean_absolute_error",
+                "value": 3.9797921180725098
+              },
+              {
+                "name": "val_loss",
+                "value": 11.681310653686523
+              }
+            ],
+            "timestamp": "2019-08-21T05:21:23.000Z",
+            "iteration": 11
+          },
+          {
+            "phase": "training",
+            "values": [
+              {
+                "name": "val_mean_absolute_error",
+                "value": 10.309898376464844
+              },
+              {
+                "name": "loss",
+                "value": 2.625227689743042
+              },
+              {
+                "name": "mean_absolute_error",
+                "value": 2.625227689743042
+              },
+              {
+                "name": "val_loss",
+                "value": 10.309898376464844
+              }
+            ],
+            "timestamp": "2019-08-21T05:21:24.000Z",
+            "iteration": 12
+          },
+          {
+            "phase": "training",
+            "values": [
+              {
+                "name": "loss",
+                "value": 2.462573289871216
+              },
+              {
+                "name": "mean_absolute_error",
+                "value": 2.462573289871216
+              },
+              {
+                "name": "val_loss",
+                "value": 10.471904754638672
+              },
+              {
+                "name": "val_mean_absolute_error",
+                "value": 10.471904754638672
+              }
+            ],
+            "timestamp": "2019-08-21T05:21:24.000Z",
+            "iteration": 13
+          },
+          {
+            "phase": "training",
+            "values": [
+              {
+                "name": "loss",
+                "value": 2.753127336502075
+              },
+              {
+                "name": "mean_absolute_error",
+                "value": 2.753127336502075
+              },
+              {
+                "name": "val_loss",
+                "value": 8.705238342285156
+              },
+              {
+                "name": "val_mean_absolute_error",
+                "value": 8.705238342285156
+              }
+            ],
+            "timestamp": "2019-08-21T05:21:24.000Z",
+            "iteration": 14
+          },
+          {
+            "phase": "training",
+            "values": [
+              {
+                "name": "loss",
+                "value": 2.198340892791748
+              },
+              {
+                "name": "mean_absolute_error",
+                "value": 2.198340892791748
+              },
+              {
+                "name": "val_loss",
+                "value": 8.810187339782715
+              },
+              {
+                "name": "val_mean_absolute_error",
+                "value": 8.810187339782715
+              }
+            ],
+            "timestamp": "2019-08-21T05:21:25.000Z",
+            "iteration": 15
+          },
+          {
+            "phase": "training",
+            "values": [
+              {
+                "name": "loss",
+                "value": 2.4580442905426025
+              },
+              {
+                "name": "mean_absolute_error",
+                "value": 2.4580442905426025
+              },
+              {
+                "name": "val_loss",
+                "value": 7.283923625946045
+              },
+              {
+                "name": "val_mean_absolute_error",
+                "value": 7.283923625946045
+              }
+            ],
+            "timestamp": "2019-08-21T05:21:25.000Z",
+            "iteration": 16
+          },
+          {
+            "phase": "training",
+            "values": [
+              {
+                "name": "mean_absolute_error",
+                "value": 2.3290131092071533
+              },
+              {
+                "name": "val_loss",
+                "value": 6.426774024963379
+              },
+              {
+                "name": "val_mean_absolute_error",
+                "value": 6.426774024963379
+              },
+              {
+                "name": "loss",
+                "value": 2.3290131092071533
+              }
+            ],
+            "timestamp": "2019-08-21T05:21:26.000Z",
+            "iteration": 17
+          },
+          {
+            "phase": "training",
+            "values": [
+              {
+                "name": "mean_absolute_error",
+                "value": 2.143099069595337
+              },
+              {
+                "name": "val_loss",
+                "value": 5.837696075439453
+              },
+              {
+                "name": "val_mean_absolute_error",
+                "value": 5.837696075439453
+              },
+              {
+                "name": "loss",
+                "value": 2.143099069595337
+              }
+            ],
+            "timestamp": "2019-08-21T05:21:26.000Z",
+            "iteration": 18
+          },
+          {
+            "phase": "training",
+            "values": [
+              {
+                "name": "loss",
+                "value": 1.9497495889663696
+              },
+              {
+                "name": "mean_absolute_error",
+                "value": 1.9497495889663696
+              },
+              {
+                "name": "val_loss",
+                "value": 6.023331642150879
+              },
+              {
+                "name": "val_mean_absolute_error",
+                "value": 6.023331642150879
+              }
+            ],
+            "timestamp": "2019-08-21T05:21:27.000Z",
+            "iteration": 19
+          }
+        ],
+        "current_at": "2019-08-21T05:28:58.007Z",
+        "training_reference_name": "OILPRICE_RNN"
+      },
+      {
+        "training_guid": "model-dmz3yfx1_0",
+        "training_definition_url": "https://us-south.ml.cloud.ibm.com/v3/ml_assets/training_definitions/b2533c6a-09d7-4c72-b0b1-11f3a434f4c5",
+        "training_url": "/v3/models/model-dmz3yfx1_0",
+        "state": "running",
+        "submitted_at": "2019-08-21T05:13:37.439Z",
+        "running_at": "2019-08-21T05:13:37.439Z",
+        "hyper_parameters": [
+          {
+            "name": "prev_periods",
+            "int_value": 2
+          },
+          {
+            "name": "dropout_rate",
+            "double_value": 0.3
+          }
+        ],
+        "results": {
+          "reference": {
+            "type": "s3",
+            "connection": {
+              "endpoint_url": "https://s3-api.us-geo.objectstorage.softlayer.net",
+              "access_key_id": "f88f2b41902f44d682daf125b6adfda5",
+              "secret_access_key": "d288b4754ebfc9646cf13a4431472a04d7522ded7b651855"
+            },
+            "location": {
+              "bucket": "oilprice-rnn-results-2810v5",
+              "model_location": "training-cRM8zrOWg",
+              "file_name": "model-dmz3yfx1_0"
+            }
+          }
+        },
+        "parent_training_guid": "model-dmz3yfx1",
+        "metrics": [],
+        "current_at": "2019-08-21T05:13:58.970Z",
+        "training_reference_name": "OILPRICE_RNN"
+      },
+      {
+        "training_guid": "model-dmz3yfx1_1",
+        "training_definition_url": "https://us-south.ml.cloud.ibm.com/v3/ml_assets/training_definitions/b2533c6a-09d7-4c72-b0b1-11f3a434f4c5",
+        "training_url": "/v3/models/model-dmz3yfx1_1",
+        "state": "running",
+        "submitted_at": "2019-08-21T05:21:28.976Z",
+        "running_at": "2019-08-21T05:21:28.976Z",
+        "hyper_parameters": [
+          {
+            "name": "prev_periods",
+            "int_value": 2
+          },
+          {
+            "name": "dropout_rate",
+            "double_value": 0.1
+          }
+        ],
+        "results": {
+          "reference": {
+            "type": "s3",
+            "connection": {
+              "endpoint_url": "https://s3-api.us-geo.objectstorage.softlayer.net",
+              "access_key_id": "f88f2b41902f44d682daf125b6adfda5",
+              "secret_access_key": "d288b4754ebfc9646cf13a4431472a04d7522ded7b651855"
+            },
+            "location": {
+              "bucket": "oilprice-rnn-results-2810v5",
+              "model_location": "training-cRM8zrOWg",
+              "file_name": "model-dmz3yfx1_1"
+            }
+          }
+        },
+        "parent_training_guid": "model-dmz3yfx1",
+        "metrics": [],
+        "current_at": "2019-08-21T05:21:35.463Z",
+        "training_reference_name": "OILPRICE_RNN"
+      }
+    ]
+  },
+  "experiment": {
+    "guid": "f0124958-7cea-4c0f-8397-272ad44a1696",
+    "url": "/v3/experiments/f0124958-7cea-4c0f-8397-272ad44a1696",
+    "evaluation_definition": {
+      "metrics": [
+        {
+          "name": "val_mean_absolute_error"
+        }
+      ]
+    }
+  }
+}
