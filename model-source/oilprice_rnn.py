@@ -222,9 +222,9 @@ if __name__ == '__main__':
         metrics_file = os.environ["RESULT_DIR"] + '/val_dict_list.json'
     else:
         metrics_file = 'val_dict_list.json'
-    
-    with open(metrics_file, 'w') as f:
-       json.dump(metrics_out, f)
+
+    #with open(metrics_file, 'w') as f:
+    #   json.dump(metrics_out, f)
 
     # Check out MSE, RMSE, MAE for  testing data
     #testing_error = model.evaluate(testX, testY, verbose=0)
