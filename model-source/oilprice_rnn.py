@@ -125,7 +125,7 @@ if __name__ == '__main__':
     if environ.get('LOG_DIR') is not None and  environ.get('SUBID') is not None:
        tb_directory_test = os.environ["LOG_DIR"]+ "/" + os.environ["SUBID"] + "/logs/tb/test"
     else:
-       tb_directory_test = "/Users/carew@us.ibm.com/build/timeseries-rnn-lab-part2/model-source/logs/tb/test"
+       tb_directory_test = "logs/tb/test"
     tensorboard_test = TensorBoard(log_dir=tb_directory_test)
     tensorflow.gfile.MakeDirs(tb_directory_test)
 
@@ -133,7 +133,7 @@ if __name__ == '__main__':
     if environ.get('LOG_DIR') is not None and environ.get('SUBID') is not None:
        tb_directory_train = os.environ["LOG_DIR"]+ "/" + os.environ["SUBID"] + "/logs/tb/train"
     else:
-       tb_directory_train = "/Users/carew@us.ibm.com/build/timeseries-rnn-lab-part2/model-source/logs/tb/train"
+       tb_directory_train = "logs/tb/train"
     tensorboard_train = TensorBoard(log_dir=tb_directory_train)
     tensorflow.gfile.MakeDirs(tb_directory_train)
 
@@ -215,7 +215,7 @@ if __name__ == '__main__':
 
     if environ.get('RESULT_DIR') is not None:
         metrics_file = '{}/val_dict_list.json'.format(os.environ['RESULT_DIR'])
-    else
+    else:
         metrics_file = 'val_dict_list.json'
     #with open(), 'w') as f:
     with open('val_dict_list.json', 'w') as f:
