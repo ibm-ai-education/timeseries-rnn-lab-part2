@@ -81,7 +81,7 @@ if __name__ == '__main__':
 
     #writing metrics
     if environ.get('JOB_STATE_DIR') is not None:
-        tb_directory = os.path.join(os.environ["JOB_STATE_DIR"], "logs", "tb", "test")
+        tb_directory = os.path.join(os.environ["SUBID"], os.environ["JOB_STATE_DIR"], "logs", "tb", "test")
     else:
         tb_directory = os.path.join("logs", "tb", "test")
 
@@ -106,7 +106,7 @@ if __name__ == '__main__':
     else:
         prev_periods = 1
         #dropout_rate = 0.2
-        
+
     dropout_rate = 0.2
     # data_url = "https://ibm.box.com/shared/static/ojkntksc9rdbrj52yzkqfhbc1c9kv833.csv"
 
