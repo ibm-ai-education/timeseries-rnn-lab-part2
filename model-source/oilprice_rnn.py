@@ -137,7 +137,6 @@ if __name__ == '__main__':
     tensorboard_train = TensorBoard(log_dir=tb_directory_train)
     tensorflow.gfile.MakeDirs(tb_directory_train)
 
-    splitter=MetricsSplitter(tensorboard_train,tensorboard_test)
 
     ###############################################################################
 
@@ -199,8 +198,9 @@ if __name__ == '__main__':
     model.compile(loss='mean_squared_error', optimizer='adam', metrics=['mae'])
 
     #hpo = HPOMetrics()
+    splitter=MetricsSplitter(tensorboard_train,tensorboard_test)
 
-    history = model.fit(trainX, trainY, epochs=epochs, batch_size=batch_size, validation_data=(testX, testY), shuffle=False)
+    history = model.fit(trainX, trainY, epochs=epochs, batch_size=batch_size, validation_data=(testX, testY), callbacks=[splitter], shuffle=False)
 
     #hpo.close()
     #history = model.fit(trainX, trainY, epochs=epochs, batch_size=batch_size, validation_data=(testX, testY),  callbacks=[tensorboard], shuffle=False)
