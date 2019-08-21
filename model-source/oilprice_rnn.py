@@ -208,7 +208,7 @@ if __name__ == '__main__':
     #print("Training history:" + str(history.history))
     metrics_out = []
     for i in range(epochs):
-        each_epoch = {"steps": (i+1)}
+        each_epoch = {"steps": i}
         for metric in list(history.history.keys()):
             each_epoch[metric] = history.history[metric][i]
         metrics_out.append(each_epoch)
