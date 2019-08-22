@@ -145,16 +145,20 @@ if __name__ == '__main__':
     # Set up HPO.
     ###############################################################################
 
+    prev_periods = 1
+    dropout_rate = 0.2
+
     config_file = "config.json"
 
     if os.path.exists(config_file):
         with open(config_file, 'r') as f:
             json_obj = json.load(f)
-            prev_periods = int(json_obj["prev_periods"])
-            dropout_rate = float(json_obj["dropout_rate"])
-    else:
-        prev_periods = 1
-        dropout_rate = 0.2
+            if 'prev_periods' in json_obj:
+               prev_periods = int(json_obj["prev_periods"])
+            if 'dropout_rate' in json_obj:
+               dropout_rate = float(json_obj["dropout_rate"])
+
+
 
 
    ###############################################################################
