@@ -200,7 +200,7 @@ if __name__ == '__main__':
     #hpo = HPOMetrics()
     splitter=MetricsSplitter(tensorboard_train,tensorboard_test)
 
-    history = model.fit(trainX, trainY, epochs=epochs, batch_size=batch_size, validation_data=(testX, testY), callbacks=[splitter], shuffle=False)
+    history = model.fit(trainX, trainY, epochs=epochs, verbose=0, batch_size=batch_size, validation_data=(testX, testY), callbacks=[splitter], shuffle=False)
 
     #hpo.close()
     #history = model.fit(trainX, trainY, epochs=epochs, batch_size=batch_size, validation_data=(testX, testY),  callbacks=[tensorboard], shuffle=False)
@@ -225,6 +225,7 @@ if __name__ == '__main__':
 
     with open(metrics_file, 'w') as f:
       json.dump(metrics_out, f)
+      f.flush()
 
     # Check out MSE, RMSE, MAE for  testing data
     #testing_error = model.evaluate(testX, testY, verbose=0)
