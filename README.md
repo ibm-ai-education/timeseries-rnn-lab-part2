@@ -2,7 +2,7 @@
 
 ## Part 2 - Hyperparameter optimization, model deployment and scoring with Watson Studio
 
-This Watson Studio labs continues working with the RNN developed in  [Part 1](https://github.com/ibm-ai-education/timeseries-rnn-lab-part1). It contains the steps and code to demonstrate support of deep learning experiments in Watson Machine Learning Service. It illustrates the use of the Watson Machine Learning Python API for getting data, experiment definition, hyper parameter optimization, model persistence, model deployment and scoring.
+This Watson Studio lab continues working with the RNN developed in  [Part 1](https://github.com/ibm-ai-education/timeseries-rnn-lab-part1). It contains the steps and code to demonstrate support of deep learning experiments in Watson Machine Learning Service. It illustrates the use of the Watson Machine Learning Python API for getting data, experiment definition, hyper parameter optimization, model persistence, model deployment and scoring.
 
 ## Setup
 
